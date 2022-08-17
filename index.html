@@ -13,12 +13,12 @@
 
         <title>Início - eAgenda Web</title>
 </head>
-<body class="bg-dark">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark my-2 border-bottom border-secondary">
+<body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark my-2 shadow-lg">
                 <div class="container">
                   <a class="navbar-brand" href="index.html">
                         eAgenda
-                        <span class="badge bg-warning text-bg-light">WEB</span>
+                        <span class="badge bg-primary text-bg-light">WEB</span>
                 </a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -30,7 +30,7 @@
                         </li>
                         <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Cadastro
+                                        Cadastros
                                 </a>
                                 <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="./public/tarefas/tarefa.list.html">Tarefas</a></li>
@@ -41,30 +41,30 @@
                         </li>
                     </ul>
                     <li class="nav-item ms-auto d-none d-lg-block">
-
+                        <span class="badge bg-primary"><img src="./img/mlogo.png"></span>
                     </li>
                   </div>
                 </div>
               </nav>
 
-              <main class="container mt-4 text-bg-dark">
+              <main class="container mt-4 text-bg-dark rounded-4">
                 <section id="introducao">
-                        <div class="text-center text-md-start">
-                                <div class="row-cols-1 row-cols-md-2 d-flex flex-wrap-reverse align-items-center">
-                                        <div class="col mt-4 mt-md-0">
+                        <div class="text-center text-md-start shadow-lg">
+                                <div class="row-cols-1 row-cols-md-2 d-flex flex-wrap-reverse align-items-center m-5">
+                                        <div class="col mt-3 mt-md-1">
                                                 <header>
                                                         <h1 class="fw-bolder">Olá, seja bem-vindo!</h1>
-                                                        <h2 class="text-warning fs-3">A aplicação web da eAgenda está aqui!</h2>
+                                                        <h2 class="text-primary fs-3">A aplicação web da eAgenda está aqui!</h2>
                                                         <hr>
                                                 </header>
                                                 <article>
-                                                        <p class="fs-5">Nossa aplicação oferece simpliscidade na hora de gerenciar suas tarefas</p>
+                                                        <p class="fs-5">Nossa aplicação oferece simpliscidade na hora de gerenciar suas tarefas.</p>
                                                         <p class="fs-5">Que tal começar cadastrando uma nova tarefa?</p>
                                                         <a id="btnCadastro" href="./public/tarefas/tarefa.list.html" class="btn btn-lg btn-primary">Cadastro de Tarefas</a>
                                                 </article>
                                         </div>
                                         <div class="col no-select">
-                                                <img src="" class="drop-shadow w-75">
+                                                <img src="./img/businessman.png" class="drop-shadow w-50 m-2">
                                         </div>
                                 </div>
                         </div>
