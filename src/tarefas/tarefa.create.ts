@@ -60,7 +60,8 @@ class TarefaPaginaCadastro implements IPaginaHTML, IPaginaFormulario {
 
                 //metodo para redirecionar usuario
                 window.location.href = "tarefa.list.html";
-        }      
+        }
+        
         private obterDadosFormulario(): Tarefa {
                 const descricao = this.txtDescricao.value;
                 const prioridade = this.obterPrioridadeSelecionada();

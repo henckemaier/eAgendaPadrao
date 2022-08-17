@@ -11,6 +11,13 @@ class ContatoPaginaCadastro {
                 this.preencherFormulario(contatoSelecionado);
         }
     }
+    preencherFormulario(contatoSelecionado) {
+        this.txtNome.value = contatoSelecionado.nome;
+        this.txtEmail.value = contatoSelecionado.email;
+        this.txtTelefone.value = contatoSelecionado.telefone;
+        this.txtEmpresa.value = contatoSelecionado.empresa;
+        this.txtCargo.value = contatoSelecionado.cargo;
+    }
     configurarElementos() {
         this.txtNome = document.getElementById("txtNome");
         this.txtEmail = document.getElementById("txtEmail");
@@ -22,10 +29,26 @@ class ContatoPaginaCadastro {
         this.btnSalvar.addEventListener("click", (_evt) => this.gravarRegistros());
     }
     gravarRegistros() {
-        const novoContato = new Contato(this.txtNome.value, this.txtEmail.value, this.txtTelefone.value, this.txtEmpresa.value, this.txtCargo.value);
-        this.repositorioContatos.inserir(novoContato);
+        const contato = this.obterDadosFormulario();
+        if (!this.idSelecionado)
+            this.repositorioContatos.inserir(contato);
+        else
+            this.repositorioContatos.editar(contato.id, contato);
         //metodo para redirecionar usuario
         window.location.href = "contato.list.html";
+    }
+    obterDadosFormulario() {
+        const nome = this.txtNome.value;
+        const email = this.txtEmail.value;
+        const telefone = this.txtTelefone.value;
+        const empresa = this.txtEmpresa.value;
+        const cargo = this.txtCargo.value;
+        let contato = null;
+        if (!this.idSelecionado)
+            contato = new Contato(nome, email, telefone, empresa, cargo);
+        else
+            contato = new Contato(nome, email, telefone, empresa, cargo, this.idSelecionado);
+        return contato;
     }
 }
 const params = new URLSearchParams(window.location.search);
